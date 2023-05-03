@@ -1,0 +1,15 @@
+body {
+  margin: 0 auto;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
+html {
+  box-sizing: border-box;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

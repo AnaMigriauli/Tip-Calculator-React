@@ -1,0 +1,15 @@
+.bill-input-common {
+  border-radius: 5px;
+  background-color: #f3f9fa;
+  color: #00474b;
+  /* font-size: 24px; */
+  text-align: end;
+  border: none;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+}
+
+.input-border {
+  border: 1px solid #26c2ae;
+  outline: none;
+}
