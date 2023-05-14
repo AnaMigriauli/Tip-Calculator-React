@@ -14,7 +14,9 @@ function App(props) {
 
   let percentage = ["5%", "10%", "15%", "25%", "50%"];
   const tipAmountValue = (billValue / numPerson / tipValue).toFixed(2);
-  const totalValue = (billValue / numPerson).toFixed(2);
+  const totalValue = (billValue / numPerson + Number(tipAmountValue)).toFixed(
+    2
+  );
 
   const colorChangeHandler = () => {
     if (numPerson.toString().trim().length >= 0) {
