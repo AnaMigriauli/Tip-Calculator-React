@@ -1,15 +1,17 @@
 .bill-input-common {
   border-radius: 5px;
-  background-color: #f3f9fa;
-  color: #00474b;
-  /* font-size: 24px; */
+  background-color: var(--lightGray);
+  color: var(--darkgray);
+
   text-align: end;
   border: none;
   font-family: "Space Mono", monospace;
   font-weight: 700;
+  padding-right: 17px;
+  caret-color: var(--grayisGreen);
 }
 
 .input-border {
-  border: 1px solid #26c2ae;
+  border: 1px solid var(--grayisGreen);
   outline: none;
 }

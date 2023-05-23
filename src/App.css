@@ -1,28 +1,36 @@
+@import "./Components/CSS/variables.css";
 #root:has(.app) {
-  background-color: #c5e4e7;
+  background-color: var(--lightGreen);
 }
 .app {
-  color: #3d6666;
+  color: var(--green);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
+.app-title {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.bill-lable {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-size: 16px;
+  color: var(--grey);
+}
 .splitter-card {
-  background-color: #ffffff;
-  width: 375px;
-  height: 789px;
+  background-color: var(--white);
   border-radius: 25px 25px 0 0;
 }
 .calculate-card {
   margin: 32px 32px;
 }
 .result-card {
-  width: 327px;
-  height: 257px;
-  margin: 0px 24px 32px 24px;
-  background-color: #00474b;
+  padding: 37px 22px 24px 24px;
+  margin: 32px 24px;
+
+  background-color: var(--darkgray1);
   border-radius: 15px;
 }
 .bill-input {
@@ -34,7 +42,6 @@
   opacity: 35%;
   font-size: 24px;
   line-height: 35.54px;
-  margin-right: 17px;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -45,15 +52,15 @@ input::-webkit-inner-spin-button {
 }
 .visible {
   display: block;
-  color: #e17457;
+  color: var(--orangeRed);
 }
 .labels {
   display: flex;
   justify-content: space-between;
-  margin-top: 32px;
+  /* margin-top: 32px; */
 }
 .redBorder {
-  border: 1px solid #e17457 !important;
+  border: 1px solid var(--orangeRed) !important;
 }
 .btns {
   display: grid;
@@ -65,63 +72,63 @@ input::-webkit-inner-spin-button {
   all: unset;
   padding: 6px 17.55px 6px 16.29px;
   text-align: center;
-  background-color: #00474b;
-  color: #ffffff;
+  background-color: var(--darkgray1);
+  color: var(--white);
   font-size: 24px;
   border-radius: 5px;
   border: none;
 }
 .tip-percetage-onclick {
-  background-color: #26c2ae;
-  color: #00474b;
+  background-color: var(--grayisGreen);
+  color: var(--darkgray1);
 }
-.label-text {
+.tip-lable {
   font-size: 16px;
-  color: #5e7a7d;
+  color: var(--grey);
   margin-top: 32px;
+  margin-bottom: 16px;
   line-height: 23.7px;
 }
+
 .num-text {
   font-size: 16px;
-  color: #5e7a7d;
+  margin-bottom: 6px;
+  color: var(--grey);
   line-height: 23.7px;
 }
 .resetBtn {
-  background-color: #0d686d;
-  color: #00474b;
+  background-color: var(--darkgrey2);
+  color: var(--darkgray1);
   border-radius: 5px;
   width: 281px;
   height: 48px;
   cursor: pointer;
-  margin-bottom: 22px;
-  margin-left: 22px;
+  margin-top: 14px;
   border: none;
   font-size: 20px;
 }
 .reset-btn-active {
-  background-color: #26c2ae;
+  background-color: var(--grayisGreen);
 }
 .resetBtn:hover {
   background-color: #9fe8df;
 }
-/* .reset-btn-clicked {
-  background-color: #9fe8df;
-} */
+
 .resultCardText {
-  color: #ffffff;
+  color: var(--white);
   font-size: 16px;
   line-height: 23.7px;
 }
 .person {
-  color: #7f9d9f;
+  color: var(--grey);
   font-size: 13px;
 }
 .number {
-  color: #26c2ae;
+  color: var(--grayisGreen);
   font-size: 32px;
 }
 .custom {
-  background-color: #f3f9fa;
+  background-color: var(--lightGray);
   font-size: 24px;
 }
 .custom::placeholder {
@@ -130,13 +137,13 @@ input::-webkit-inner-spin-button {
 .result-value {
   display: flex;
   flex-direction: column;
-  margin: 37px 22px 32px 24px;
 }
 .amount-value,
 .total-value {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 21px;
 }
 .icon {
   position: absolute;

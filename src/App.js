@@ -23,7 +23,7 @@ function App(props) {
       setColor(false);
     }
   };
-  console.log(numPerson);
+
   const reloadHadler = (e) => {
     setNumPerson("");
     setTipValue("");
@@ -46,7 +46,7 @@ function App(props) {
       </h1>
       <div className="splitter-card ">
         <div className="calculate-card">
-          <label className="label-text">Bill</label>
+          <label className="bill-lable">Bill</label>
           <div className="input">
             <Input
               className="bill-input"
@@ -62,7 +62,7 @@ function App(props) {
             />
             <img src={icon1} className="icon" alt="icon" />
           </div>
-          <p className="label-text">Select Tip %</p>
+          <p className="tip-lable">Select Tip %</p>
 
           <div className="btns">
             {percentage.map((a, i) => (
