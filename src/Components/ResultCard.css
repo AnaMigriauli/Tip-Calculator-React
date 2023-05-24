@@ -1,0 +1,72 @@
+@import "./CSS/variables.css";
+.result-card {
+  padding: 37px 22px 24px 24px;
+  margin: 32px 24px;
+  background-color: var(--darkgray1);
+  border-radius: 15px;
+}
+
+.result-value {
+  display: flex;
+  flex-direction: column;
+}
+.amount-value,
+.total-value {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 21px;
+}
+.resetBtn {
+  background-color: var(--darkgrey2);
+  color: var(--darkgray1);
+  border-radius: 5px;
+  width: 281px;
+  height: 48px;
+  cursor: pointer;
+  margin-top: 14px;
+  border: none;
+  font-size: 20px;
+}
+.reset-btn-active {
+  background-color: var(--grayisGreen);
+}
+.resetBtn:hover {
+  background-color: #9fe8df;
+}
+.resultCardText {
+  color: var(--white);
+  font-size: 16px;
+  line-height: 23.7px;
+}
+.person {
+  color: var(--grey);
+  font-size: 13px;
+}
+.number {
+  color: var(--grayisGreen);
+  font-size: 32px;
+}
+@media (min-width: 920px) {
+  .result-card {
+    width: 413px;
+    height: 417px;
+    margin: 32px 32px 32px 0;
+  }
+  .amount-value {
+    margin-bottom: 25px;
+    align-items: center;
+  }
+  .total-value {
+    margin-bottom: 122px;
+    align-items: center;
+  }
+  .number {
+    font-size: 48px;
+  }
+  .resetBtn {
+    display: block;
+    margin: 0 auto;
+    width: 333px;
+  }
+}

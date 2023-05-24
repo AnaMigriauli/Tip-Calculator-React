@@ -1,43 +1,89 @@
-// import React, { useState } from "react";
-// import Input from "./UI/Input";
+import { Fragment } from "react";
+import Input from "./UI/Input";
+import icon1 from "../$.svg";
+import icon2 from "../Group 8.svg";
+import "./CalculateCard.css";
+const CalculateCard = (props) => {
+  return (
+    <Fragment>
+      <div className="calculate-card">
+        <label className="bill-lable">Bill</label>
+        <div className="input">
+          <Input
+            className="bill-input"
+            type="number"
+            placeholder="0"
+            min={0}
+            value={props.billValue}
+            onKeyDown={(e) => (e.key === "." ? e.preventDefault() : "e.key")}
+            onChange={(e) => {
+              props.setBillValue(e.target.value);
+              props.colorChangeHandler();
+            }}
+          />
+          <img src={icon1} className="icon" alt="icon" />
+        </div>
+        <p className="tip-lable">Select Tip %</p>
 
-// const CalculateCard = (props) => {
-//   // const [percentValue, setPersentValue] = useState("");
-//   const [billValue, setBillValue] = useState("");
-//   const [numPerson, setNumPerson] = useState("");
-//   let percentage = ["5%", "10%", "15%", "25%", "50%"];
-
-//   // let aHandler = (e) => {
-//   //   setPersentValue(e.target.textContent.slice(0, -1));
-//   // };
-//   // console.log
-//   return (
-//     <div className="calculate-card">
-//       <div>
-//         <label>Bill</label>
-//         <input
-//           value={billValue}
-//           onChange={(e) => setBillValue(e.target.value)}
-//         ></input>
-//       </div>
-
-//       <p>Select Tip %</p>
-//       <div>
-//         {percentage.map((a, i) => (
-//           <button key={i}>{a}</button>
-//         ))}
-//         <input className="custom" placeholder="Custom" />
-//       </div>
-//       <div>
-//         <label>Number of People</label>
-//         <input
-//           value={numPerson}
-//           onChange={(e) => setNumPerson(e.target.value)}
-//         ></input>
-//       </div>
-//       {/* <Input>{"Number of People"}</Input> */}
-//     </div>
-//   );
-// };
-
-// export default CalculateCard;
+        <div className="btns">
+          {props.percentage.map((a, i) => (
+            <button
+              className={`tip-percetage ${
+                props.tipValue === a.slice(0, -1) ? "tip-percetage-onclick" : ""
+              }`}
+              key={i}
+              onClick={() => {
+                props.setTipValue(a.slice(0, -1));
+                props.colorChangeHandler();
+              }}
+            >
+              {a}
+            </button>
+          ))}
+          <Input
+            className="custom"
+            type="number"
+            placeholder="Custom"
+            value={props.tipValue}
+            min={0}
+            onKeyDown={(e) => (e.key === "." ? e.preventDefault() : "e.key")}
+            onChange={(e) => {
+              props.setTipValue(e.target.value);
+              props.colorChangeHandler();
+            }}
+          />
+        </div>
+        <div>
+          <div className="labels">
+            <label className="num-text">Number of People</label>
+            <label
+              className={`hidden ${
+                props.numPerson === Number("0") ? "visible" : ""
+              }`}
+            >
+              Can't be zero
+            </label>
+          </div>
+          <div className="input">
+            <Input
+              className={`bill-input ${
+                props.numPerson === Number("0") ? "redBorder" : ""
+              }`}
+              type="number"
+              placeholder="0"
+              min={0}
+              value={props.numPerson}
+              onKeyDown={(e) => (e.key === "." ? e.preventDefault() : "e.key")}
+              onChange={(e) => {
+                props.setNumPerson(e.target.value);
+                props.colorChangeHandler();
+              }}
+            />
+            <img src={icon2} alt="logo" className="icon" />
+          </div>
+        </div>
+      </div>
+    </Fragment>
+  );
+};
+export default CalculateCard;

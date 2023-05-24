@@ -1,0 +1,110 @@
+@import "./CSS/variables.css";
+.bill-lable {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-size: 16px;
+  color: var(--grey);
+}
+.calculate-card {
+  margin: 32px 32px;
+}
+
+.bill-input {
+  width: 311px;
+  height: 48px;
+  font-size: 24px;
+  padding-right: 17px;
+}
+.bill-input::placeholder {
+  opacity: 35%;
+  font-size: 24px;
+  line-height: 35.54px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+  color: var(--orangeRed);
+}
+.labels {
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 32px; */
+}
+
+.btns {
+  display: grid;
+  grid-template-columns: 146.63px 146.63px;
+  gap: 16.56px;
+  margin-bottom: 32px;
+}
+.tip-percetage {
+  all: unset;
+  padding: 6px 17.55px 6px 16.29px;
+  text-align: center;
+  background-color: var(--darkgray1);
+  color: var(--white);
+  font-size: 24px;
+  border-radius: 5px;
+  border: none;
+}
+.tip-percetage-onclick {
+  background-color: var(--grayisGreen);
+  color: var(--darkgray1);
+}
+.tip-lable {
+  font-size: 16px;
+  color: var(--grey);
+  margin-top: 32px;
+  margin-bottom: 16px;
+  line-height: 23.7px;
+}
+
+.num-text {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: var(--grey);
+  line-height: 23.7px;
+}
+
+.custom {
+  background-color: var(--lightGray);
+  font-size: 24px;
+  padding-right: 5px;
+}
+.custom::placeholder {
+  margin-right: 15px;
+}
+
+.redBorder {
+  border: 1px solid var(--orangeRed) !important;
+}
+.icon {
+  position: absolute;
+  left: 6.19%;
+  right: 90.64%;
+  top: 35.15%;
+  bottom: 32.65%;
+}
+.input {
+  position: relative;
+}
+
+@media (min-width: 920px) {
+  .bill-input {
+    width: 379px;
+  }
+  .btns {
+    grid-template-columns: 117px 117px 117px;
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+  .calculate-card {
+    margin: 45px 0 48px 48px;
+  }
+}

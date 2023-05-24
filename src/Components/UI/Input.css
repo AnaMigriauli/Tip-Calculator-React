@@ -1,13 +1,13 @@
+@import "../CSS/variables.css";
 .bill-input-common {
   border-radius: 5px;
   background-color: var(--lightGray);
   color: var(--darkgray);
-
   text-align: end;
   border: none;
   font-family: "Space Mono", monospace;
   font-weight: 700;
-  padding-right: 17px;
+
   caret-color: var(--grayisGreen);
 }
 

@@ -13,145 +13,20 @@
   margin-top: 50px;
   margin-bottom: 40px;
 }
-.bill-lable {
-  display: inline-block;
-  margin-bottom: 4px;
-  font-size: 16px;
-  color: var(--grey);
-}
+
 .splitter-card {
   background-color: var(--white);
   border-radius: 25px 25px 0 0;
 }
-.calculate-card {
-  margin: 32px 32px;
-}
-.result-card {
-  padding: 37px 22px 24px 24px;
-  margin: 32px 24px;
 
-  background-color: var(--darkgray1);
-  border-radius: 15px;
-}
-.bill-input {
-  width: 311px;
-  height: 48px;
-  font-size: 24px;
-}
-.bill-input::placeholder {
-  opacity: 35%;
-  font-size: 24px;
-  line-height: 35.54px;
-}
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-.hidden {
-  display: none;
-}
-.visible {
-  display: block;
-  color: var(--orangeRed);
-}
-.labels {
-  display: flex;
-  justify-content: space-between;
-  /* margin-top: 32px; */
-}
-.redBorder {
-  border: 1px solid var(--orangeRed) !important;
-}
-.btns {
-  display: grid;
-  grid-template-columns: 146.63px 146.63px;
-  gap: 16.56px;
-  margin-bottom: 32px;
-}
-.tip-percetage {
-  all: unset;
-  padding: 6px 17.55px 6px 16.29px;
-  text-align: center;
-  background-color: var(--darkgray1);
-  color: var(--white);
-  font-size: 24px;
-  border-radius: 5px;
-  border: none;
-}
-.tip-percetage-onclick {
-  background-color: var(--grayisGreen);
-  color: var(--darkgray1);
-}
-.tip-lable {
-  font-size: 16px;
-  color: var(--grey);
-  margin-top: 32px;
-  margin-bottom: 16px;
-  line-height: 23.7px;
-}
-
-.num-text {
-  font-size: 16px;
-  margin-bottom: 6px;
-  color: var(--grey);
-  line-height: 23.7px;
-}
-.resetBtn {
-  background-color: var(--darkgrey2);
-  color: var(--darkgray1);
-  border-radius: 5px;
-  width: 281px;
-  height: 48px;
-  cursor: pointer;
-  margin-top: 14px;
-  border: none;
-  font-size: 20px;
-}
-.reset-btn-active {
-  background-color: var(--grayisGreen);
-}
-.resetBtn:hover {
-  background-color: #9fe8df;
-}
-
-.resultCardText {
-  color: var(--white);
-  font-size: 16px;
-  line-height: 23.7px;
-}
-.person {
-  color: var(--grey);
-  font-size: 13px;
-}
-.number {
-  color: var(--grayisGreen);
-  font-size: 32px;
-}
-.custom {
-  background-color: var(--lightGray);
-  font-size: 24px;
-}
-.custom::placeholder {
-  margin-right: 15px;
-}
-.result-value {
-  display: flex;
-  flex-direction: column;
-}
-.amount-value,
-.total-value {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 21px;
-}
-.icon {
-  position: absolute;
-  left: 6.19%;
-  right: 90.64%;
-  top: 35.15%;
-  bottom: 32.65%;
-}
-.input {
-  position: relative;
+@media (min-width: 920px) {
+  .splitter-card {
+    width: 920px;
+    height: 481px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 25px;
+    margin-bottom: 240px;
+  }
 }
