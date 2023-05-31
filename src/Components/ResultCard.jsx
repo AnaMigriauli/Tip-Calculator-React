@@ -8,7 +8,11 @@ const ResultCard = (props) => {
             <label className="resultCardText">Tip Amount</label>
             <p className="person">/person</p>
           </div>
-          <div className="number">
+          <div
+            className={`number ${
+              props.tipAmountValue.length >= 7 ? "number1" : ""
+            }`}
+          >
             $
             {props.tipAmountValue === "NaN" ||
             props.tipAmountValue === "Infinity"
@@ -21,7 +25,11 @@ const ResultCard = (props) => {
             <p className="resultCardText">Total</p>
             <p className="person">/person</p>
           </div>
-          <div className="number">
+          <div
+            className={`number ${
+              props.totalValue.length >= 7 ? "number1" : ""
+            }`}
+          >
             $
             {props.totalValue === "NaN" || props.totalValue === "Infinity"
               ? "0.00"

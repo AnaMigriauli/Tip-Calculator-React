@@ -27,11 +27,14 @@
   margin-top: 14px;
   border: none;
   font-size: 20px;
+  font-weight: 700;
+  line-height: 29.62px;
+  font-family: "Space Mono";
 }
 .reset-btn-active {
   background-color: var(--grayisGreen);
 }
-.resetBtn:hover {
+.resetBtn:active {
   background-color: #9fe8df;
 }
 .resultCardText {
@@ -52,6 +55,7 @@
     width: 413px;
     height: 417px;
     margin: 32px 32px 32px 0;
+    padding: 40px;
   }
   .amount-value {
     margin-bottom: 25px;
@@ -64,9 +68,12 @@
   .number {
     font-size: 48px;
   }
+  .number1 {
+    font-size: 40px;
+  }
   .resetBtn {
     display: block;
     margin: 0 auto;
-    width: 333px;
+    width: 100%;
   }
 }

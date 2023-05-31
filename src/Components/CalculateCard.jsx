@@ -17,8 +17,10 @@ const CalculateCard = (props) => {
             value={props.billValue}
             onKeyDown={(e) => (e.key === "." ? e.preventDefault() : "e.key")}
             onChange={(e) => {
-              props.setBillValue(e.target.value);
-              props.colorChangeHandler();
+              if (e.target.value.length < 7) {
+                props.setBillValue(e.target.value);
+                props.colorChangeHandler();
+              }
             }}
           />
           <img src={icon1} className="icon" alt="icon" />
@@ -48,8 +50,10 @@ const CalculateCard = (props) => {
             min={0}
             onKeyDown={(e) => (e.key === "." ? e.preventDefault() : "e.key")}
             onChange={(e) => {
-              props.setTipValue(e.target.value);
-              props.colorChangeHandler();
+              if (e.target.value.length < 4) {
+                props.setTipValue(e.target.value);
+                props.colorChangeHandler();
+              }
             }}
           />
         </div>
@@ -57,9 +61,7 @@ const CalculateCard = (props) => {
           <div className="labels">
             <label className="num-text">Number of People</label>
             <label
-              className={`hidden ${
-                props.numPerson === Number("0") ? "visible" : ""
-              }`}
+              className={`hidden ${props.numPerson === "0" ? "visible" : ""}`}
             >
               Can't be zero
             </label>
@@ -67,7 +69,7 @@ const CalculateCard = (props) => {
           <div className="input">
             <Input
               className={`bill-input ${
-                props.numPerson === Number("0") ? "redBorder" : ""
+                props.numPerson === "0" ? "redBorder" : ""
               }`}
               type="number"
               placeholder="0"
@@ -75,8 +77,10 @@ const CalculateCard = (props) => {
               value={props.numPerson}
               onKeyDown={(e) => (e.key === "." ? e.preventDefault() : "e.key")}
               onChange={(e) => {
-                props.setNumPerson(e.target.value);
-                props.colorChangeHandler();
+                if (e.target.value.length < 8) {
+                  props.setNumPerson(e.target.value);
+                  props.colorChangeHandler();
+                }
               }}
             />
             <img src={icon2} alt="logo" className="icon" />
